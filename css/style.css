@@ -1,0 +1,22 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  padding: 30px 0;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+#footer .footer-content {
+  text-align: center;
+}
+
+#footer .copyright {
+  font-size: 15px;
+  color: #45505b;
+  letter-spacing: 0.5px;
+}
+
+#footer .copyright span {
+  font-weight: 500;
+} 
