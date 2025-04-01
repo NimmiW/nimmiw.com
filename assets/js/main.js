@@ -268,4 +268,44 @@
     }
   });
 
+  // News Section Scroll Controls
+  document.addEventListener('DOMContentLoaded', function() {
+    const scrollWrapper = document.querySelector('.scrolling-wrapper');
+    const leftArrow = document.querySelector('.scroll-left');
+    const rightArrow = document.querySelector('.scroll-right');
+    const scrollAmount = 800; // Adjust this value to control scroll distance
+
+    if (scrollWrapper && leftArrow && rightArrow) {
+      // Show/hide arrows based on scroll position
+      const updateArrowVisibility = () => {
+        leftArrow.style.opacity = scrollWrapper.scrollLeft > 0 ? '1' : '0.5';
+        rightArrow.style.opacity = 
+          scrollWrapper.scrollLeft < (scrollWrapper.scrollWidth - scrollWrapper.clientWidth) 
+          ? '1' : '0.5';
+      };
+
+      // Initial arrow visibility
+      updateArrowVisibility();
+
+      // Scroll left
+      leftArrow.addEventListener('click', () => {
+        scrollWrapper.scrollBy({
+          left: -scrollAmount,
+          behavior: 'smooth'
+        });
+      });
+
+      // Scroll right
+      rightArrow.addEventListener('click', () => {
+        scrollWrapper.scrollBy({
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+      });
+
+      // Update arrow visibility on scroll
+      scrollWrapper.addEventListener('scroll', updateArrowVisibility);
+    }
+  });
+
 })()
