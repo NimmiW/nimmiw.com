@@ -3,13 +3,13 @@ name: Deploy Static Website nimmiw.com
 on:
   push:
     branches:
-      - main # or your default branch name
+      - master # or your default branch name
   workflow_dispatch: # Allow manual triggering
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -27,4 +27,4 @@ jobs:
             **/.git*/**
             **/node_modules/**
             README.md
-            .github/workflows/* 
+            .github/workflows/*
