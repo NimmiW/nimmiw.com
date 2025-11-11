@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>URSA/PURE Internship — UCalgary Software Engineering Lab</title>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#0f172a;
+      --muted:#475569;
+      --accent:#e11d48;
+      --accent-2:#0891b2;
+      --gold:#f59e0b;
+      --card:#f8fafc;
+      --ring:#e2e8f0;
+    }
+    @media print {
+      @page { size: Letter; margin: 0.5in; }
+      a { color: black; text-decoration: none; }
+      .btn, .qr { display: none; }
+      .poster { box-shadow: none !important; }
+    }
+    *{ box-sizing: border-box; }
+    body{
+      margin:0; background:linear-gradient(180deg,#ffffff, #f6f7fb 60%);
+      color:var(--ink); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    .poster{
+      max-width: 900px; margin: 32px auto; background:var(--bg); border-radius: 20px; padding: 32px;
+      box-shadow: 0 12px 40px #0f172a12, 0 4px 16px #0f172a0a; border:1px solid var(--ring);
+    }
+    .header{ display:flex; gap:20px; align-items: center; }
+    .badge{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; background:var(--ink); color:white; padding:6px 10px; border-radius:999px; }
+    h1{ font-size: 40px; line-height:1.05; margin:10px 0 8px 0; }
+    .sub{ color:var(--muted); font-size:16px; }
+
+    .grid{ display:grid; gap:18px; grid-template-columns: 1fr; }
+    @media (min-width: 820px){ .grid{ grid-template-columns: 1fr 1fr; } }
+
+    .card{
+      background: var(--card); border:1px solid var(--ring); border-radius:16px; padding:18px 18px 16px;
+    }
+    .card h3{ margin: 0 0 6px 0; font-size: 20px; }
+    .card .lead{ color: var(--muted); margin:0 0 10px 0; }
+    .topic{ border-left: 4px solid var(--accent); padding-left: 12px; }
+    .topic.alt{ border-color: var(--accent-2); }
+
+    ul{ margin:10px 0 0 18px; }
+    li{ margin:6px 0; }
+
+    .pill{
+      display:inline-flex; align-items:center; gap:6px; background:white; border:1px solid var(--ring); padding:6px 10px; border-radius:999px; font-size:13px; margin:6px 6px 0 0;
+    }
+
+    .section h2{ font-size:22px; margin: 18px 0 6px 0; }
+
+    .footer{
+      margin-top: 18px; display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:space-between;
+      border-top:1px dashed var(--ring); padding-top:14px;
+    }
+    .btn{
+      display:inline-block; background:var(--accent); color:white; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600;
+      box-shadow: 0 6px 14px #e11d4822;
+    }
+    .btn.alt{ background: var(--accent-2); box-shadow: 0 6px 14px #0891b222; }
+
+    .keyline{ display:flex; gap:10px; flex-wrap:wrap; }
+
+    .kvs{ display:grid; grid-template-columns: 120px 1fr; gap: 6px 14px; font-size: 14px; }
+    .kvs div:nth-child(odd){ color: var(--muted); }
+
+    .stamp{
+      display:inline-flex; align-items:center; gap:8px; background:#fff7ed; color:#9a3412; border:1px solid #fed7aa; padding:8px 12px; border-radius:10px; font-weight:600;
+    }
+    .emoji{ font-size: 22px; }
+    .callout{ background:linear-gradient(180deg,#fff,#fff7f9); border:1px solid var(--ring); border-radius:16px; padding:14px; }
+  </style>
+</head>
+<body>
+  <main class="poster" role="document">
+    <div class="header">
+      <div>
+        <span class="badge">NSERC URSA / PURE — Summer 2026</span>
+        <h1>Build Smarter Game QA — <span style="color:var(--accent)">Two 4‑month internships</span></h1>
+        <p class="sub">May 2026 - Aug 2026 • University of Calgary • Software Engineering for Games</p>
+      </div>
+    </div>
+
+    <section class="grid" aria-label="Topics">
+      <article class="card topic">
+        <h3>🎮 Topic 1 — Turning Play into Code</h3>
+        <p class="lead">Games are chaotic—physics, quests, randomness, and player actions. We teach games to <em>test themselves</em>.</p>
+        <ul>
+          <li>Record key play traces (player stats, physics, mission flags, timers).</li>
+          <li>Replay traces to auto‑generate unit tests that reproduce scenarios.</li>
+          <li><strong>Mismatch?</strong> Congrats, you just caught a bug 💥</li>
+        </ul>
+      </article>
+      <article class="card topic alt">
+        <h3>🎨 Topic 2 — Helping Non‑Code Assets Talk Back</h3>
+        <p class="lead">Art, audio, maps, and scripts shape gameplay. Let’s make them first‑class citizens in QA.</p>
+        <ul>
+          <li>Analyze changes to textures, levels, animations, and sounds.</li>
+          <li>Track how assets impact gameplay, performance, and tests.</li>
+          <li>Give each asset a <strong>“voice”</strong> in the pipeline 🎧</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section" aria-label="Who & Term">
+      <div class="card">
+        <h2>Who should apply & Term Info</h2>
+        <div class="pill"><span class="emoji">🧑🏽‍🎓</span> 3rd‑year CS / SE / Game Dev</div>
+        <div class="pill"><span class="emoji">💻</span> Comfortable with Python or C#/Unity</div>
+        <div class="pill"><span class="emoji">🧠</span> Bonus: ML or graphics interest</div>
+        <div class="pill"><span class="emoji">🔬</span> Curious, creative, research‑minded</div>
+        <div class="kvs" style="margin-top:12px;">
+          <div>Duration</div><div>4 months (May - Aug 2026)</div>
+          <div>Positions</div><div>Two students — one per topic</div>
+          <div>Program</div><div>NSERC URSA or UCalgary PURE</div>
+          <div>Reference</div><div><a href="https://taylorinstitute.ucalgary.ca/pure-awards/students/how-to-apply/application-guide" target="_blank">PURE Application Guide</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="callout section" aria-label="How to apply">
+      <h2>How to apply</h2>
+      <ul>
+        <li>Send <strong>CV</strong> and <strong>unofficial transcript</strong> (both PDF) to <a href="mailto:nimmi.weeraddana@ucalgary.ca">nimmi.weeraddana@ucalgary.ca</a>.</li>
+        <li>Subject line: <strong>“URSA/PURE Application”</strong></li>
+        <li>State your topic: <strong>Topic 1</strong> or <strong>Topic 2</strong>; include preference if you have one.</li>
+      </ul>
+      <p class="stamp">Deadline: <strong>December 1, 2025</strong></p>
+    </section>
+
+    <section class="section" aria-label="Why join us">
+      <h2>Why join our lab?</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Real‑world impact</h3>
+          <p class="lead">Ship insights that make testing <em>faster</em> and <em>smarter</em> for game studios.</p>
+          <ul>
+            <li>Automated scenario‑driven unit tests</li>
+            <li>Asset‑aware quality gates</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Mentorship & growth</h3>
+          <p class="lead">Weekly 1:1s, reading groups, and demo days. Learn research, engineering, and presentation skills.</p>
+          <ul>
+            <li>Clean coding & reproducible workflows</li>
+            <li>Paper‑ and poster‑ready results</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="keyline">
+        <span class="pill"><span class="emoji">📅</span> May–Aug 2026</span>
+        <span class="pill"><span class="emoji">🧪</span> Software Engineering for Games</span>
+        <span class="pill"><span class="emoji">🧰</span> Python • C#/Unity • Git</span>
+        <span class="pill"><span class="emoji">🌐</span> University of Calgary</span>
+      </div>
+      <div class="keyline">
+        <a class="btn" href="mailto:nimmi.weeraddana@ucalgary.ca?subject=URSA/PURE%20Application">Apply via Email</a>
+        <a class="btn alt" href="#" onclick="window.print()">Print Poster</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
